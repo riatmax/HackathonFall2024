@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Hackathon",
+    "description": "Sustainability",
+    "version": "1.0",
+    "action": {
+      "default_popup": "page.html",
+      "default_icon": "Victor.png"
+    }
+  }
