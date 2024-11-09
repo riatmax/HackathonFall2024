@@ -3,8 +3,35 @@
     "name": "Hackathon",
     "description": "Sustainability",
     "version": "1.0",
+    "permissions": [
+        "tabs"
+    ],
+    "host_permissions": [
+        "http://www.amazon.com/*",
+        "https://www.amazon.com/*"
+    ],
+    "background": {
+        "service_worker": "scripts/background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.amazon.com/*", "http://www.amazon.com/*"],
+            "js": ["scripts/content.js"]
+        }
+    ],
     "action": {
-      "default_popup": "html/page.html",
-      "default_icon": "Victor.png"
-    }
-  }
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon/Victor.png",
+        "48": "icon/Victor.png",
+        "128": "icon/Victor.png"
+        }
+    },
+    "icons": {
+        "16": "icon/Victor.png",
+        "48": "icon/Victor.png",
+        "128": "icon/Victor.png"
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
+
