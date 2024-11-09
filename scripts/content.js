@@ -1,30 +1,21 @@
+
+let addToCartButton = document.getElementById('#add-to-cart-button');
+if (addToCartButton) {
+    addToCartButton.disabled = true;
+    addToCartButton.style.pointerEvents = 'none';
+    console.log('Add to Cart button has been blocked.');
+}
+else {
+    console.log('not found');
+}
 function blockBuyButton() {
-    const buyButton = document.querySelector('#buy-now-button, a-button-input');
-
+    let buyButton = document.getElementById("input#buy-now-button.a-button-input");
     if (buyButton) {
-        buyButton.disabled = true;
-        buyButton.computedStyleMap.pointerEvents = 'none';
-        console.log("buy now button blocked");
+         buyButton.disabled = true;
+        buyButton.style.pointerEvents = 'none';  // Prevent interaction
+        console.log('Buy Now button has been blocked.');
     }
     else {
-        console.log("not found");
+        console.log('not found');
     }
 }
-
-function blockAddToCartButton() {
-    const addToCartButton = document.querySelector('#add-to-cart-button, .a-button-input');
-
-    if (addToCartButton) {
-        addToCartButton.disabled = true;
-        addToCartButton.style.pointerEvents = 'none'; 
-        console.log("Add to Cart button has been blocked.");
-    }
-    else {
-        console.log("not found");
-    }
-}
-
-window.addEventListener('load', () => {
-    blockBuyButton();
-    blockAddToCartButton();
-})
