@@ -13,7 +13,7 @@ document.getElementById('blockButton').addEventListener('click', function () {
   // This function is injected into the page to disable the Buy Now button
   function blockBuyButton() {
     // Disable "Buy Now" button on Amazon product pages
-    const buyButton = document.querySelector('#buy-now-button, .a-button-input');
+    const buyButton = document.querySelector('#buy-now-button.a-button-input');
     if (buyButton) {
       buyButton.disabled = true;
       buyButton.style.pointerEvents = 'none';  // Prevent interaction
@@ -24,7 +24,7 @@ document.getElementById('blockButton').addEventListener('click', function () {
     }
     
     // Optionally, disable "Add to Cart" button
-    const addToCartButton = document.querySelector('#add-to-cart-button, .a-button-input');
+    const addToCartButton = document.querySelector('#add-to-cart-button.a-button-input');
     if (addToCartButton) {
       addToCartButton.disabled = true;
       addToCartButton.style.pointerEvents = 'none';
